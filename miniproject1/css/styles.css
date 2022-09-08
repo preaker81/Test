@@ -1,5 +1,4 @@
 body{
-    margin: 100px 0px 0px 0px;
     background-color: whitesmoke;
 }
 
@@ -67,6 +66,10 @@ a:hover{
 
 a:active{
     color: black;
+}
+
+.topmargin{
+    margin: 100px 0px 0px 0px;
 }
 
 /* CSS
