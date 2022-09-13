@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
 </head>
+
 <body>
-    <section class="topmargin">
-        <a href="../index.html">Presentation</a>
-        <a href="../html/inspiration.html">Inspiration</a>
-    </section>
 
-<form action="" method="post">
+    <nav class="topmargin">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <img src="../images/JimmyLogo.png" alt="Logo Jimmy Karlsson">
+            </li>
+            <li class="nav-item">
+                <a href="../index.html">Presentation</a>
+            </li>
+            <li class="nav-item">
+                <a href="./inspiration.html">Inspiration</a>
+            </li>
+            <li class="nav-item">
+                <a href="./Imagegallery.html">Images</a>
+            </li>
+            <li class="nav-item">
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
 
-    <label for="email">E-mail</label>
-    <input type="email" name="email" placeholder="Your Email" required>
+    <form action="" method="post">
 
-    <label for="name">Name</label>
-    <input type="text" name="name" placeholder="Your name" required>
+        <label for="formemail">E-mail</label>
+        <input type="email" id="formemail" name="email" placeholder="Your Email" required>
 
-    <label for="message">Message</label>
-    <textarea name="message" id="message" rows="4" placeholder="Only kind words!"></textarea><br>
+        <label for="formname">Name</label>
+        <input type="text" id="formname" name="name" placeholder="Your name" required>
 
-    <button type="submit">Send</button>
-</form>
+        <label for="formmessage">Message</label>
+        <textarea id="formmessage" name="message" rows="4" placeholder="Only kind words!"></textarea><br>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <footer class="footer">
+        <div class="footer-content">
+
+        </div>
+
+        <div class="footer-bottom">
+            &copy; preaker18@gmail.com | Designed by Jimmy Karlsson
+        </div>
+
+    </footer>
 </body>
+
 </html>
