@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -6,51 +6,149 @@
     outline: 0;
 }
 
-body{
-    background-color: lightgray;
+body {
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 
-header{
+/* Navbar */
+nav{
     display: flex;
     flex-flow: row nowrap;
+    justify-content: end;
+    align-items: center;
     position: fixed;
     top: 0px;
+    background-color: #585858;
+    z-index: 1;
     width: 100%;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-    background-color: lightblue;
+    height: 80px;
 }
 
-main{
-    background-color: #ffffff;
-    margin-top: 100px;
-    width: 100%;
-    height: 100vh;
+.nav-list{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    padding-right: 10%;
 }
 
-footer{
+.nav-item {
+    list-style: none;
+    font-style: oblique;
+    font-size: 20px;
+    padding: 1rem;
+}
+
+.nav-item:first-child{
+    margin-right: auto;
+    padding-left: 2rem;
+}
+/* //Navbar */
+
+main {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 50px auto;
+    border: 2px solid black;
+}
+
+footer {
     display: flex;
     flex-flow: row nowrap;
     position: fixed;
     bottom: 0px;
     width: 100%;
-    height: auto;
-    min-height: 50px;
-    background-color: #383838;
-    justify-content: space-around;
+    height: 50px;
+    background-color: #585858;
+    justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
-.project-thumbnail{
-    flex-basis: 33.333%;
-    height: 15rem;
-    border: 1px solid hotpink;
+/* Links */
+a {
+    text-decoration: none;
 }
 
-.social-bar{
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: #bdbec0;
+}
+
+a:active {
+    color: darkgray;
+}
+
+/* //Links */
+
+
+/* Gallery */
+.container {
+    padding: 40px 5%;
+  }
+  
+  .heading-text {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .heading-text span {
+    font-weight: 100;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Responsive image gallery rules begin*/
+  
+  .image-gallery {
     display: flex;
-    flex-flow: row nowrap;
-}
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .image-gallery > li {
+    flex: 1 1 auto;
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .image-gallery::after {
+    content: "";
+    flex-grow: 999;
+  }
+  
+  .image-gallery li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(57, 57, 57, 0.502);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.2s 0.1s ease-in-out;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-gallery li:hover .overlay {
+    transform: scale(1);
+  }
+/* //Gallery */

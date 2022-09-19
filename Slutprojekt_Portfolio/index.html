@@ -10,41 +10,46 @@
 </head>
 
 <body>
-
-    <!-- Ett bildgalleri med minst 4 projekt. Varje projekt i galleriet ska ha ett foto och en rubrik. 
-    Navbar med länkar till lämpliga sidor. (Var den är och hur den ser ut bestämmer du själv)
-    Footer med lämplig information. -->
-    <header>
-        <img src="https://www.placecage.com/g/50/50" alt="Logo">
         <nav>
-            <a href="./index.html">Home</a>
-            <a href="./html/about.html">About</a>
-            <a href="#">Contact</a>
+            <img src="./media/template_logo_50px.png" alt="" class="nav-item">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="./index.html">Home</a></li>
+                <li class="nav-item"><a href="./html/about.html">About</a></li>
+                <li class="nav-item"><a href="./html/contact.html">Contact</a></li>
+            </ul>
         </nav>
-    </header>
+
+
 
     <main>
-        <div class="project-thumbnail">
-            
+        <div class="container">
+            <h2 class="heading-text">Project <span>gallery</span></h2>
+            <ul class="image-gallery">
+                <li>
+                    <img src="https://www.fillmurray.com/g/800/400" alt="" />
+                    <div class="overlay"><span> <a href="./html/project_1.html">Project 1</a></span></div>
+                </li>
+                <li>
+                    <img src="https://www.fillmurray.com/g/800/400" alt="" />
+                    <div class="overlay"><span> <a href="./html/project_2.html">Project 2</a></span></div>
+                </li>
+                <li>
+                    <img src="https://www.fillmurray.com/g/600/400" alt="" />
+                    <div class="overlay"><span> <a href="./html/project_3.html">Project 3</a></span></div>
+                </li>
+                <li>
+                    <img src="https://www.fillmurray.com/g/400/400" alt="" />
+                    <div class="overlay"><span> <a href="./html/project_4.html">Project 4</a></span></div>
+                </li>
+            </ul>
         </div>
-
-        <div class="project-thumbnail">
-            
-        </div>
-
-        <div class="project-thumbnail">
-            
-        </div>
-
-        <div class="project-thumbnail">
-
-        </div>
-
     </main>
 
     <footer>
         <div>
-            <a href="mailto:preaker18@gmail.com">@ Jimmy Karlsson</a>
+            <ul>
+                <li><a href="mailto:preaker18@gmail.com">@ Jimmy Karlsson</a></li>
+            </ul>
         </div>
 
         <div class="social-bar">
