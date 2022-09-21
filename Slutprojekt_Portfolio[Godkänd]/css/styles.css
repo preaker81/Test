@@ -10,7 +10,10 @@ body {
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 
-/* Navbar */
+ul {
+  list-style: none;
+}
+
 nav {
   display: flex;
   flex-flow: row nowrap;
@@ -42,8 +45,6 @@ nav {
   padding-left: 2rem;
 }
 
-/* //Navbar */
-
 footer {
   display: flex;
   flex-flow: row nowrap;
@@ -57,7 +58,6 @@ footer {
   z-index: 1;
 }
 
-/* Links */
 a {
   text-decoration: none;
 }
@@ -78,15 +78,6 @@ a:active {
   color: #88A0A8;
 }
 
-/* //Links */
-
-
-/* Gallery */
-.index-container {
-  padding: 40px 10%;
-  margin: 50px auto 50px auto;
-}
-
 .heading-text {
   margin-bottom: 2rem;
   font-size: 2rem;
@@ -96,11 +87,12 @@ a:active {
   font-weight: 100;
 }
 
-ul {
-  list-style: none;
-}
 
-/* Gallery*/
+/* Index Page*/
+.index-container {
+  padding: 40px 10%;
+  margin: 50px auto 50px auto;
+}
 
 .image-gallery {
   display: flex;
@@ -153,13 +145,15 @@ ul {
 .project-container {
   display: flex;
   flex-basis: row nowrap;
-  max-height: 75vh;
-  margin: 6rem 1rem;
+  height: 80vh;
+  margin: 5rem 1rem;
+  padding: 1rem;
+  /* border: 2px solid black; */
 }
 
 .project-mainimage {
-  height: 60vh;
   width: 40vw;
+  /* border: 2px solid grey;   */
 }
 
 .project-mainimage>img {
@@ -170,14 +164,15 @@ ul {
   display: flex;
   flex-flow: column nowrap;
   width: 60vw;
-  margin: 0rem 1rem;
+  margin-left: 1rem;
 }
 
 .project-sample-image {
   display: flex;
   flex-flow: row nowrap;
-  height: 25vh;
+  height: 30vh;
   margin-bottom: 1rem;
+  /* border: 2px solid grey; */
 }
 
 .project-sample-image>div>img {
@@ -186,11 +181,10 @@ ul {
 }
 
 .project-content-text {
-  height: 50vh;
   text-align: left;
-  padding: 3rem;
   font-size: 1.2vw;
   font-weight: 100;
+  /* border: 2px solid grey; */
 }
 
 /* // */
@@ -200,19 +194,16 @@ ul {
 .about-container {
   margin: 6rem 1rem;
   display: flex;
-  width: 90vw;
-  height: 75vh;
+  height: 80vh;
 }
 
 .about-container>img {
-  display: block;
   float: left;
   margin: 1rem;
 }
 
 .about-container>article {
   padding: 1rem 2rem;
-  margin-right: 2rem;
 }
 
 .about-container>article>p {
