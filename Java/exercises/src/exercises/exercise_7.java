@@ -17,12 +17,12 @@ public class exercise_7 {
 		}
 
 		else {
-			return;
+			while (userInput <= 10) {
+				System.out.println(userInput);
+				userInput++;
+			}
 		}
-
-
 		myscanner.close();
-
 
 	}
 
