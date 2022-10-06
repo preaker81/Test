@@ -12,14 +12,16 @@ public class exercise_10 {
 
 		for (int i = 0; i < 15; i++) {
 			int rnd = new Random().nextInt(name.length);
-			count[rnd] += 1;
+			count[rnd]++;
 			System.out.println(name[rnd]);
 		}
 
 		System.out.println("----------");
 
-		for (int j = 0; j < 10; j++) {
-			System.out.println(name[j] + " - " + count[j]);
+		for (int j = 0; j <name.length; j++) {
+			if(count[j] > 0) {
+				System.out.println(name[j] + " " + count[j]);
+			}
 		}
 
 	}
