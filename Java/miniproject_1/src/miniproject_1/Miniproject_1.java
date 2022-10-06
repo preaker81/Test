@@ -1,5 +1,6 @@
 package miniproject_1;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Miniproject_1 {
@@ -7,21 +8,26 @@ public class Miniproject_1 {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-
-		do {
-			int randomNum = (int) Math.round(Math.random() * 100);
-			System.out.println(randomNum);
+		Random random = new Random();
+//		String exit = "y";
+		
+		while (true) {
+			int randomNumber = random.nextInt(100)+1;
+			int tryCount = 0;
+//			System.out.println(randomNum);
 			System.out.println("This is a Guess the number game!");
+			
 
-			int guesses = 0;
+			
 			while (true) {
 				System.out.println("Enter a number between 1 - 100");
 				int playerGuess = sc.nextInt();
-				int result = trueOrFalse(playerGuess, randomNum);
-				guesses++;
+				
+				int result = trueOrFalse(playerGuess, randomNumber);
+				tryCount++;
 
 				if (result == 1) {
-					System.out.println("You where correct and you needed " + guesses + " tries!");
+					System.out.println("You where correct and you needed " + tryCount + " tries!");
 					System.out.println("");
 					break;
 				}
@@ -35,8 +41,13 @@ public class Miniproject_1 {
 				}
 
 			}
+            System.out.println("Do you want to play again? (y/n):");
+            String input = sc.next();
+            if (!input.equals("y")) {
+                break;
+            }
 
-		} while (true);
+		}
 
 	}
 
@@ -50,10 +61,6 @@ public class Miniproject_1 {
 
 		else if (x > y) {
 			result = 2;
-		}
-
-		else {
-			result = 3;
 		}
 
 		return result;
