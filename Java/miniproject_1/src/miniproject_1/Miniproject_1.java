@@ -9,7 +9,7 @@ public class Miniproject_1 {
 
 		Scanner sc = new Scanner(System.in);
 		Random random = new Random();
-//		String exit = "y";
+
 		
 		while (true) {
 			int randomNumber = random.nextInt(100)+1;
@@ -42,7 +42,7 @@ public class Miniproject_1 {
 
 			}
             System.out.println("Do you want to play again? (y/n):");
-            String input = sc.next();
+            String input = sc.nextLine();
             if (!input.equals("y")) {
                 break;
             }
