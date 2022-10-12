@@ -20,7 +20,7 @@ public class exercise_10 {
 
 		for (int j = 0; j <name.length; j++) {
 			if(count[j] > 0) {
-				System.out.println(name[j] + " " + count[j]);
+				System.out.println(name[j] + " - " + count[j]);
 			}
 		}
 

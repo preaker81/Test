@@ -34,7 +34,7 @@ public class Main {
 		for(int i = 0; i<suits.length; i++) {
 			for(int j=0; j<signs.length; j++) {
 
-				deck[deckIndex] = new Spelkort(suits[i], signs[j]);
+				deck[deckIndex] = new Spelkort(suits[i], signs[j], j+2);
 				deckIndex++;
 			}
 		}
