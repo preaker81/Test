@@ -28,13 +28,13 @@ public class Main {
 		Spelkort[] deck = new Spelkort[52];
 		String[] suits = {"Hearts", "Clubs", "Diamonds", "Spades"};
 		String[] signs = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Kn", "Q", "K", "Ace"};
-		
+
 		int deckIndex = 0;
 		
 		for(int i = 0; i<suits.length; i++) {
 			for(int j=0; j<signs.length; j++) {
 
-				deck[deckIndex] = new Spelkort(suits[i], signs[j]);
+				deck[deckIndex] = new Spelkort(suits[i], signs[j], j +2);
 				deckIndex++;
 			}
 		}
@@ -42,7 +42,6 @@ public class Main {
 			deck[z].display();
 		}
 
-		
 	}
 
 }
