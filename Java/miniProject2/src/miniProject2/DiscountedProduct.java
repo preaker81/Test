@@ -9,7 +9,7 @@ class DiscountedProduct extends Product{
 	}
 	
 	double discountedPrice() {
-		return prodPrice * discount;
+		return getProdPrice() * discount;
 	}
 
 }
