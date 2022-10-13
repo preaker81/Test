@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+/* *{
+    border: 2px solid black;
+} */
+
+/* .topmargin {
+    margin: 100px 0px 0px 0px;
+} */
+
+body {
+    font-family: 'Montserrot', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Section CSS */
+
+section {
+    background-color: #ffffff;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 2rem;
+}
+
+section>ul {
+    list-style: none;
+    padding-left: 2rem;
+}
+
+section>h1 {
+    padding-left: 2rem;
+}
+
+/* // */
+
+/* Navbar CSS */
+
+.nav-list {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px;
+    margin: 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 0.2rem;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #25a55f;
+    background-color: #e6e6e6;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    transition: all 200ms ease-in;
+}
+
+.nav-item a:hover {
+    background-color: #ffffff;
+    color: #25a55f;
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+    margin-left: 2rem;
+}
+
+/* // */
+
+/* CSS för Image gallery */
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.image-gallery>li {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    box-shadow: 0px 0px 5px;
+}
+
+.image-gallery li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.gallery-image-text {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* // */
+
+/* Footer */
+.footer {
+    background-color: #fff;
+    color: black;
+    height: 400px;
+}
+
+.footer .footer-bottom {
+    background-color: #25a55f;
+    color: black;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+}
+
+/* // */
+
+
+
+
+
+/* Allmänna CSS */
+
+h1 {
+    color: #25a55f;
+    font-family: 'Times New Roman', Times, serif;
+    /* padding: 20px; */
+}
+
+h3 {
+    color: #25a55f;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+}
+
+p {
+    font-family: Georgia;
+    padding: 1rem;
+    max-width: 60rem;
+}
+
+img {
+    display: block;
+    float: left;
+    width: 200px;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+
+form {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 20px;
+}
