@@ -1,9 +1,9 @@
 package miniProject2;
 
 class Product {
-	String prodName;
-	int prodPrice;
-	int prodStock;
+	private String prodName;
+	private int prodPrice;
+	private int prodStock;
 
 	
 	Product(String prodName, int prodPrice, int prodStock){
@@ -19,7 +19,15 @@ class Product {
 		this.prodStock--;
 	}
 	
-	int getprodStock() {
+	String getProdName() {
+		return prodName;
+	}
+	
+	int getProdPrice() {
+		return prodPrice;
+	}
+	
+	int getProdStock() {
 		return prodStock;
 	}
 	
