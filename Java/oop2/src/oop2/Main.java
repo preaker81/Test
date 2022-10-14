@@ -14,14 +14,19 @@ public class Main {
 	spider1.sleeping();
 	
 	
-	SavingsAccount account1 = new SavingsAccount(0, 0, 0, 0);
+	SavingsAccount account1 = new SavingsAccount(0, 0);
 	account1.balance();
 	
-	account1.depositIntrest(1000, 1.02);
-	account1.balance();
-	account1.depositIntrest(1000, 1.02);
-	account1.balance();
+	account1.depositIntrest(100, 0.1);
+	System.out.println(account1.getBalance());
 
+	
+	System.out.println("""
+			asdfasdgasdg
+			asdfasdfa
+			sadfadsfgasdfadf
+			adfadsf
+			""");
 	}
 
 }

@@ -4,12 +4,11 @@ class BankAccount {
 
 	double deposit;
 	double whitdraw;
-	double balance;
+	private double balance;
 
-	BankAccount(double balance, double deposit, double whitdraw) {
+	BankAccount(double balance) {
 		this.balance = balance;
-		this.deposit = deposit;
-		this.whitdraw = whitdraw;
+
 	}
 
 	// Metoder
@@ -25,5 +24,13 @@ class BankAccount {
 
 	void balance() {
 		System.out.println("Your balance is: " + balance + "kr");
+	}
+	
+	double getBalance() {
+		return balance;
+	}
+	
+	double setBalance(double balance) {
+		return this.balance = balance;
 	}
 }

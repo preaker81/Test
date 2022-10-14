@@ -9,7 +9,7 @@ class DiscountedProduct extends Product{
 	}
 	
 	double discountedPrice() {
-		return getProdPrice() * discount; //är det overkill att ha alla egenskaper private?
+		return getProdPrice() - (getProdPrice() * discount);
 	}
 
 }

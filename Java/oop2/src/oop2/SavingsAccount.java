@@ -1,15 +1,16 @@
 package oop2;
 
 class SavingsAccount extends BankAccount{
-	double intrest;
+	private double intrest;
 	
-	SavingsAccount(double intrest, double deposit, double whitdraw, double balance){
-		super(deposit, whitdraw, balance);
+	SavingsAccount(double balance , double intrest){
+		super(balance);
 		this.intrest = intrest;
 	}
 	
 	void depositIntrest(double deposit, double intrest) {
-		balance = (balance + deposit)*intrest;
+		double newBalance = getBalance() + deposit + (deposit*intrest);
+		setBalance(newBalance);
 		System.out.println("You deposited: " + deposit + "kr");
 	}
 
