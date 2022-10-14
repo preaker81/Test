@@ -3,6 +3,7 @@ package miniProject2;
 import java.util.Scanner;
 
 public class Main {
+
 	//TODO Hur löser vi att prodAmount ökar fast metoden hindrar
 
 	public static void main(String[] args) {

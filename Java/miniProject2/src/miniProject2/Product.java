@@ -12,6 +12,7 @@ class Product {
 		this.prodStock = prodStock;
 	}
 
+	//Metoder
 	void setStockSell(){
 		if(this.prodStock <= 0) {
 			this.prodStock = 0;

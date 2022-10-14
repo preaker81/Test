@@ -1,6 +1,6 @@
 package miniProject2;
 
-class Customer{
+class Customer {
 	private int prodAmount = 0;
 	private double sumCost = 0;
 
@@ -18,11 +18,9 @@ class Customer{
 	int getProdAmount() {
 		return this.prodAmount;
 	}
-	
+
 	double getsumCost() {
 		return this.sumCost;
 	}
-
-
 
 }
