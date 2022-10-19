@@ -3,7 +3,10 @@ package frameworkExercices;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Period;
+import java.time.temporal.TemporalField;
+import java.time.temporal.WeekFields;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Main {
 
@@ -61,7 +64,7 @@ public class Main {
 			System.out.println("It is your birthday today!");
 		}
 		// TODO #4
-		LocalDate date = LocalDate.of(2022, 5, 6);
+		LocalDate date = LocalDate.of(2022, 6, 6);
 		for (int i = 0; i < ((date.lengthOfMonth() + 1) - date.getDayOfMonth()); i++) {
 			LocalDate printDate = date.plusDays(i);
 			System.out.println(printDate + " - " + printDate.getDayOfWeek());
@@ -74,7 +77,7 @@ public class Main {
 		LocalTime lunch = LocalTime.of(11, 0);
 		System.out.println(lunch.getHour() - time.getHour());
 		// Exeptions #1
-
+		
 	}
 
 }
