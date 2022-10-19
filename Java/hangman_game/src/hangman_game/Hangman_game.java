@@ -9,7 +9,7 @@ public class Hangman_game {
 	public static void main(String[] args) throws Exception {
 		
 		while(true) {
-		System.out.println("Welcome to Hangman, the dictionary contains 180k english words");
+		System.out.println("Welcome to Hangman, the dictionary contains 194k english words");
 		File dictionary = new File("/Git/Test/Java/hangman_game/src/english3.txt");
 
 		Scanner textScanner = new Scanner(dictionary);
