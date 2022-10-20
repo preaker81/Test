@@ -8,6 +8,10 @@ import java.time.temporal.WeekFields;
 import java.util.Arrays;
 import java.util.Locale;
 
+import javaSlutproject.Sun;
+import javaSlutproject.att;
+import javaSlutproject.jobbar;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -77,7 +81,7 @@ public class Main {
 		LocalTime lunch = LocalTime.of(11, 0);
 		System.out.println(lunch.getHour() - time.getHour());
 		// Exeptions #1
-		
+
 	}
 
 }
