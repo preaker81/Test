@@ -1,65 +1,64 @@
 package javaSlutproject;
 
-import java.awt.ComponentOrientation;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.Component;
+import java.awt.Container;
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 class GUI {
 
-	static void createAndDisplay() {
+	public static void addComponentsToPanel(Container panel) {
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
-		JFrame frame = new JFrame("First Example");
-		frame.setSize(700, 400);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		JPanel groupContainer = new JPanel();
-
-		addGroupOfComponents("Day 1", groupContainer);
-		addGroupOfComponents("Day 2", groupContainer);
-		addGroupOfComponents("Day 3", groupContainer);
-		addGroupOfComponents("Day 4", groupContainer);
-		addGroupOfComponents("Day 5", groupContainer);
-		addGroupOfComponents("Day 6", groupContainer);
-		addGroupOfComponents("Day 7", groupContainer);
-		
-		groupContainer.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
-		frame.add(groupContainer);
-		frame.setVisible(true);
-
+		addALabelWeekday("Label WeekDay", panel);
+		addALabelDate("Label Date", panel);
+		addATextField("TextField", panel);
+		addAButton("Button", panel);
+	
 	}
 	
-	private static void addGroupOfComponents(String text, JPanel container) {
-		JLabel labelWeekday = new JLabel("Weekday");
-		JLabel labelEvent = new JLabel("Event");
-		JTextField textField = new JTextField("Add an event");
-		JButton button = new JButton("Add");
-		
-		addButtonListener(button);
-
+	private static void addALabelWeekday(String text, Container container) {
+		JLabel labelWeekday = new JLabel(text);
+		labelWeekday.setHorizontalAlignment((int) Component.CENTER_ALIGNMENT);
 		container.add(labelWeekday);
-		container.add(labelEvent);
-		container.add(textField);
+	}
+	
+	private static void addALabelDate(String text, Container container) {
+		JLabel labelDate = new JLabel(text);
+		labelDate.setHorizontalAlignment((int) Component.CENTER_ALIGNMENT);
+		container.add(labelDate);
+	}
+	
+	private static void addATextField(String text, Container container) {
+		JTextField textfield = new JTextField(text);
+		textfield.setHorizontalAlignment((int) Component.CENTER_ALIGNMENT);
+		container.add(textfield);
+	}
+
+	private static void addAButton(String text, Container container) {
+		JButton button = new JButton(text);
+		button.setAlignmentX(Component.CENTER_ALIGNMENT);
 		container.add(button);
-		
-		
-		
 	}
-	
-	private static void addButtonListener(JButton b) {
-		ActionListener bListener = new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				System.out.println("Button pressed");
-			}
-			
-		};
-		b.addActionListener(bListener);
+
+	static void createAndShowGUI() {
+		// Create and set up the window.
+		JFrame frame = new JFrame("Calender");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+
+		// Set up the content pane.
+		addComponentsToPanel(frame.getContentPane());
+		addComponentsToPanel(frame.getContentPane());
+		addComponentsToPanel(frame.getContentPane());
+		addComponentsToPanel(frame.getContentPane());
+
+		// Display the window.
+		frame.pack();
+		frame.setVisible(true);
 	}
-	
+
 }
