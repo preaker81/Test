@@ -5,6 +5,10 @@ public class Main {
 	public static void main(String[] args) {
 
 		GUI.createAndDisplay();
+//		Test.createAndDisplay();
+		
+
+
 		
 //		LocalDate now = LocalDate.of(2022,10,26);
 //		TemporalField fieldISO = WeekFields.of(Locale.FRANCE).dayOfWeek();
