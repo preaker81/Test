@@ -9,6 +9,7 @@ class Date {
 	
 	public static String getDate(int x) {
 		LocalDate now = LocalDate.now();
+		
 		TemporalField fieldISO = WeekFields.of(Locale.FRANCE).dayOfWeek();
 		LocalDate date = now.with(fieldISO, x);
 		String dateString = date.toString();
