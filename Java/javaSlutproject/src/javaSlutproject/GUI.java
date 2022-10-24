@@ -1,11 +1,7 @@
 package javaSlutproject;
 
-import java.awt.Color;
 import java.awt.Dimension;
-import java.time.LocalDate;
 
-import javax.swing.BorderFactory;
-import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -44,7 +40,7 @@ class GUI {
 		JPanel topPanel7 = new JPanel();
 		topPanel7.setBounds(600, 0, 100, 330);
 		topPanel7.setLayout(new BoxLayout(topPanel7, BoxLayout.PAGE_AXIS));
-		
+
 		JPanel bottomPanel1 = new JPanel();
 		bottomPanel1.setBounds(0, 330, 100, 80);
 		bottomPanel1.setLayout(new BoxLayout(bottomPanel1, BoxLayout.PAGE_AXIS));
@@ -90,7 +86,7 @@ class GUI {
 		frame.add(topPanel5);
 		frame.add(topPanel6);
 		frame.add(topPanel7);
-		
+
 		frame.add(bottomPanel1);
 		frame.add(bottomPanel2);
 		frame.add(bottomPanel3);
@@ -98,9 +94,17 @@ class GUI {
 		frame.add(bottomPanel5);
 		frame.add(bottomPanel6);
 		frame.add(bottomPanel7);
-		
+
 		frame.setVisible(true);
 	}
+
+//	private static void addTopPanels () {
+//		
+//	}
+//	
+//	private static void addBottomPanels () {
+//		
+//	}
 
 	private static void addTopGroupOfComponents(int x, JPanel container) {
 		// Creates components
@@ -112,37 +116,17 @@ class GUI {
 		container.add(labelWeekday);
 		container.add(labelDate);
 	}
-	
+
 	private static void addBottomGroupOfComponents(JPanel container) {
 		// Creates components
-		JTextField textfield = new JTextField("Add an event",40);
-		textfield.setPreferredSize(new Dimension(0,40));
+		JTextField textfield = new JTextField("Add an event", 40);
+		textfield.setPreferredSize(new Dimension(0, 40));
 		textfield.setMaximumSize(textfield.getPreferredSize());
 		Button btn = new Button("Add");
-		
 
 		// Adds the components to the JPanel container
 		container.add(textfield);
 		container.add(btn.button);
 	}
 
-	// Försök till att generera panels
-	private static void addPanel() {
-		int j = 0;
-		for (int i = 0; i <= 7; i++) {
-			int date = 1;
-			JPanel panel = new JPanel();
-			panel.setBounds(j, 0, 100, 400);
-			panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-			
-			if (Date.getDate(date) == LocalDate.now().toString()) {
-				panel.setBackground(Color.cyan);
-			} else {
-				panel.setBackground(Color.white);
-			}
-			
-			date++;
-			j = j += 100;
-		}
-	}
 }
