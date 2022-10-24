@@ -12,16 +12,17 @@ class Date {
 		
 		TemporalField fieldISO = WeekFields.of(Locale.FRANCE).dayOfWeek();
 		LocalDate date = now.with(fieldISO, x);
+		
 		String dateString = date.toString();
 		return dateString;
 	}
 	
-	public static String getWeekDay(int x) {
-		LocalDate now = LocalDate.now();
-		TemporalField fieldISO = WeekFields.of(Locale.FRANCE).dayOfWeek();
-		LocalDate date = now.with(fieldISO, x);
-		String weekday = date.getDayOfWeek().toString();
-		return weekday;
-	}
+public static String getWeekDay(int x) {
+	LocalDate now = LocalDate.now();
+	TemporalField fieldISO = WeekFields.of(Locale.FRANCE).dayOfWeek();
+	LocalDate date = now.with(fieldISO, x);
+	String weekday = date.getDayOfWeek().toString();
+	return weekday;
+}
 
 }
