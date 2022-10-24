@@ -27,13 +27,14 @@ class GUI {
 		frame.setLayout(new GridLayout());
 
 		// For loop för paneler
-		
+		int dayOfWeek = 1;
 		for (int i = 1; i <= 7; i++) {
+
 			JPanel panel = new JPanel();
 			panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 			panel.setBounds(0, 0, 100, 400);
 
-			if (Date.getDate(i).equals(LocalDate.now().toString())) {
+			if (Date.getDate(dayOfWeek).equals(LocalDate.now().toString())) {
 				panel.setBackground(Color.gray);
 			} else {
 				panel.setBackground(Color.white);
@@ -41,7 +42,7 @@ class GUI {
 
 			addComponents(i, panel, frame);
 			frame.add(panel);
-
+			dayOfWeek++;
 		}
 		frame.setVisible(true);
 	}
