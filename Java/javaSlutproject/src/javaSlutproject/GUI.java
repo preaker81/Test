@@ -35,6 +35,7 @@ class GUI {
 		frame.setVisible(true);
 	}
 
+	// method for generating panels
 	private static void addPanels(JFrame frame) {
 		for (int i = 1; i <= 7; i++) {
 			Border blackline = BorderFactory.createLineBorder(Color.black);
@@ -43,28 +44,32 @@ class GUI {
 			panel.setBounds(0, 0, 100, 400);
 			panel.setBorder(blackline);
 
-			if (Date.getDate(i).equals(LocalDate.now().toString())) {
-				panel.setBackground(new Color(180, 206, 179));
+			// sets the background to a specific color.
+			if (Date.getDate(i).equals(LocalDate.now().toString())) { // index from loop reused to get specific day of
+																		// week
+				panel.setBackground(new Color(180, 206, 179)); // color for current day
 			} else {
-				panel.setBackground(Color.lightGray);
+				panel.setBackground(Color.lightGray); // color for all days not current
 			}
 
-			addComponents(i, panel, frame);
+			addGroupOfComponents(i, panel, frame); // index from loop reused to get specific day of week
 			frame.add(panel);
 		}
 	}
 
-	private static void addComponents(int x, JPanel container, JFrame frame) {
-		JLabel labelWeekday = new JLabel(Date.getWeekDay(x));
+	// adds a group of components, expected arguments: day(day of week 1-7), target
+	// panel, target frame.
+	private static void addGroupOfComponents(int day, JPanel container, JFrame frame) {
+		JLabel labelWeekday = new JLabel(Date.getWeekDay(day));
 		labelWeekday.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-		JLabel labelDate = new JLabel(Date.getDate(x));
+		JLabel labelDate = new JLabel(Date.getDate(day));
 		labelDate.setAlignmentX(Component.CENTER_ALIGNMENT);
 
 		JPanel notePanel = new JPanel();
 		notePanel.setBackground(Color.white);
 
-		JTextField textfield = new JTextField("Add an event", 20);
+		JTextField textfield = new JTextField("Add a note", 20);
 		textfield.setPreferredSize(new Dimension(0, 30));
 		textfield.setMaximumSize(textfield.getPreferredSize());
 		textfield.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -73,7 +78,7 @@ class GUI {
 		addButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 		addButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JLabel note = new JLabel("Event");
+				JLabel note = new JLabel("");
 				notePanel.add(note);
 				note.setText("<html><p style=\"width:100px\">" + textfield.getText() + "</p><br></html>");
 				textfield.setText("");
@@ -89,7 +94,7 @@ class GUI {
 			}
 		});
 
-		addPlaceholderText(textfield, "Add an event");
+		addPlaceholderText(textfield, "Add a note");
 
 		container.add(labelWeekday);
 		container.add(labelDate);
@@ -99,21 +104,23 @@ class GUI {
 		container.add(clearButton);
 	}
 
+	// Method for adding a placeholder text. Expected arguments: target textfield,
+	// String "what the placeholder text is"
 	private static void addPlaceholderText(JTextField textfield, String placeholder) {
-		textfield.setForeground(Color.GRAY);
+		textfield.setForeground(Color.GRAY); // initial placeholder text color
 		textfield.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
 				if (textfield.getText().equals(placeholder)) {
 					textfield.setText("");
-					textfield.setForeground(Color.BLACK);
+					textfield.setForeground(Color.BLACK); // Main text color
 				}
 			}
 
 			@Override
 			public void focusLost(FocusEvent e) {
 				if (textfield.getText().isEmpty()) {
-					textfield.setForeground(Color.GRAY);
+					textfield.setForeground(Color.GRAY); // placeholder text color
 					textfield.setText(placeholder);
 				}
 			}
