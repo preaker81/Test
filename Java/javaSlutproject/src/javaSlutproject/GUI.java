@@ -23,6 +23,7 @@ class GUI {
 	protected static void createAndDisplay() {
 
 		JFrame frame = new JFrame();
+		frame.setTitle("Week Calendar");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setBackground(Color.white);
 		frame.setSize(1200, 500);
@@ -45,20 +46,18 @@ class GUI {
 			panel.setBorder(blackline);
 
 			// sets the background to a specific color.
-			if (Date.getDate(i).equals(LocalDate.now().toString())) { // index from loop reused to get specific day of
-																		// week
+			if (Date.getDate(i).equals(LocalDate.now().toString())) {// uses loop index to get day
 				panel.setBackground(new Color(180, 206, 179)); // color for current day
 			} else {
 				panel.setBackground(Color.lightGray); // color for all days not current
 			}
 
-			addGroupOfComponents(i, panel, frame); // index from loop reused to get specific day of week
+			addGroupOfComponents(i, panel, frame); // uses loop index to get day
 			frame.add(panel);
 		}
 	}
 
-	// adds a group of components, expected arguments: day(day of week 1-7), target
-	// panel, target frame.
+	// adds components panel, expected arguments: day(day of week 1-7), target panel, target frame.
 	private static void addGroupOfComponents(int day, JPanel container, JFrame frame) {
 		JLabel labelWeekday = new JLabel(Date.getWeekDay(day));
 		labelWeekday.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -104,8 +103,7 @@ class GUI {
 		container.add(clearButton);
 	}
 
-	// Method for adding a placeholder text. Expected arguments: target textfield,
-	// String "what the placeholder text is"
+	//adding a placeholder text. Expected arguments: target textfield, String "placeholder text"
 	private static void addPlaceholderText(JTextField textfield, String placeholder) {
 		textfield.setForeground(Color.GRAY); // initial placeholder text color
 		textfield.addFocusListener(new FocusListener() {
