@@ -1,5 +1,10 @@
 package javaSlutproject;
 
+/**
+ * class for making the main frame, panels and components.
+ * Also includes a method for adding placeholder text to textboxes.
+ */
+
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -20,6 +25,7 @@ import javax.swing.border.Border;
 
 class GUI {
 
+	// creates main frame and calls method for creating panels.
 	protected static void createAndDisplay() {
 
 		JFrame frame = new JFrame();
@@ -36,7 +42,8 @@ class GUI {
 		frame.setVisible(true);
 	}
 
-	// method for generating panels
+	// generating panels (condition in loop set to 1 and 7 to be reused to get correct day).
+	// expected arguments: target frame
 	private static void addPanels(JFrame frame) {
 		for (int i = 1; i <= 7; i++) {
 			Border blackline = BorderFactory.createLineBorder(Color.black);
@@ -49,7 +56,7 @@ class GUI {
 			if (Date.getDate(i).equals(LocalDate.now().toString())) {// uses loop index to get day
 				panel.setBackground(new Color(180, 206, 179)); // color for current day
 			} else {
-				panel.setBackground(Color.lightGray); // color for all days not current
+				panel.setBackground(Color.lightGray); // color for day not current
 			}
 
 			addGroupOfComponents(i, panel, frame); // uses loop index to get day
@@ -57,7 +64,8 @@ class GUI {
 		}
 	}
 
-	// adds components panel, expected arguments: day(day of week 1-7), target panel, target frame.
+	// adds components
+	//  expected arguments: day(day of week 1-7), target panel, target frame.
 	private static void addGroupOfComponents(int day, JPanel container, JFrame frame) {
 		JLabel labelWeekday = new JLabel(Date.getWeekDay(day));
 		labelWeekday.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -103,7 +111,8 @@ class GUI {
 		container.add(clearButton);
 	}
 
-	//adding a placeholder text. Expected arguments: target textfield, String "placeholder text"
+	// adding a placeholder text.
+	//  Expected arguments: target textfield, String "placeholder text"
 	private static void addPlaceholderText(JTextField textfield, String placeholder) {
 		textfield.setForeground(Color.GRAY); // initial placeholder text color
 		textfield.addFocusListener(new FocusListener() {

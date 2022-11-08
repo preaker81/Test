@@ -1,5 +1,9 @@
 package javaSlutproject;
 
+/**
+ * class whit methods for getting date or weekday from WeekField of cutrrent date.
+ */
+
 import java.time.LocalDate;
 import java.time.temporal.TemporalField;
 import java.time.temporal.WeekFields;
@@ -7,7 +11,7 @@ import java.util.Locale;
 
 class Date {
 
-	//method for getting the date from specific day of week. Expected argument: day(day of week 1-7)
+	// Expected argument: day(day of week 1-7)
 	protected static String getDate(int x) {
 		LocalDate now = LocalDate.now();
 		TemporalField weekFieldISO = WeekFields.of(Locale.FRANCE).dayOfWeek();
@@ -15,11 +19,10 @@ class Date {
 
 		String dateString = date.toString();
 		return dateString;
-		
-		
+
 	}
 
-	//method for getting the weekday from specific day of week. Expected argument: day(day of week 1-7)
+	// Expected argument: day(day of week 1-7)
 	protected static String getWeekDay(int x) {
 		LocalDate now = LocalDate.now();
 		TemporalField weekFieldISO = WeekFields.of(Locale.FRANCE).dayOfWeek();
