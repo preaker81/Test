@@ -1,3 +1,5 @@
+package trudvangDamageApp;
+
 class Shield {
 	int wa;
 	int im;

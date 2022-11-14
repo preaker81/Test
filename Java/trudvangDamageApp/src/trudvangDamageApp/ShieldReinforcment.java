@@ -1,3 +1,5 @@
+package trudvangDamageApp;
+
 class ShieldReinforcment {
 	int pv;
 	int bv;
