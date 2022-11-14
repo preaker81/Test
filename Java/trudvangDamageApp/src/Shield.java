@@ -1,5 +1,3 @@
-package trudvangDamage;
-
 class Shield {
 	int wa;
 	int im;

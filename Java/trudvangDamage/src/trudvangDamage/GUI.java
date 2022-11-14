@@ -1,5 +1,0 @@
-package trudvangDamage;
-
-class GUI {
-
-}

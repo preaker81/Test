@@ -1,9 +1,7 @@
-package trudvangDamage;
-
 import java.util.Scanner;
 
 public class Main {
-
+//test git
 	public static void main(String[] args) {
 	
 		// Armor ARGS: PV, BV, HEFT, MM, IM

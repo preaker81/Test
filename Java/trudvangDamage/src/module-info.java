@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author preak
- *
- */
-module trudvangDamage {
-}

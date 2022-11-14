@@ -1,5 +1,3 @@
-package trudvangDamage;
-
 class Armor {
 	int pv;
 	int bv;
