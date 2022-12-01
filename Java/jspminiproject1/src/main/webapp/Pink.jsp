@@ -4,15 +4,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Show Form</title>
+<title><%=request.getParameter("page")%></title>
 </head>
-<body style="background-color: <%=request.getParameter("page")%>;">
+<body style="background-color: <%=request.getParameter("page")%>">
 	<jsp:include page="./Header.jsp"></jsp:include>
 
 	<p>
 		My name is
 		<%=request.getParameter("firstName")%>
-		<%=request.getParameter("lastName")%></p>
+		<%=request.getParameter("lastName")%>
+		and this is a
+		<%=request.getParameter("page")%>
+		page.
+		</p>
 
 	<jsp:include page="./Footer.jsp"></jsp:include>
 </body>
