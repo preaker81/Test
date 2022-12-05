@@ -11,7 +11,19 @@
 
 	<h1>Application Form</h1>
 
-	<form action="./Forward.jsp" method="post">
+	<form action="
+			<%if (request.getParameter("page").equals("red")) {%>
+			<jsp:forward page="./Red.jsp" />
+			<%}%>
+
+			<%if (request.getParameter("page").equals("blue")) {%>
+			<jsp:forward page="./Blue.jsp" />
+			<%}%>
+
+			<%if (request.getParameter("page").equals("pink")) {%>
+			<jsp:forward page="./Pink.jsp" />
+			<%}%>
+	" method="post">
 
 		<label for="firstname">First Name</label>
 		<br>
