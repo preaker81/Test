@@ -11,16 +11,36 @@
 
 	<h1>Application Form</h1>
 
-	<form action="./ShowForm.jsp" method="post">
+	<form action="
+			<%if (request.getParameter("page").equals("red")) {%>
+			<jsp:forward page="./Red.jsp" />
+			<%}%>
 
-		<label for="firstname">First Name</label> <br> <input type="text"
-			name="firstName" /> <br> <label for="lastName">Last
-			Name</label> <br> <input type="text" name="lastName" /> <br> <select
-			name="page">
+			<%if (request.getParameter("page").equals("blue")) {%>
+			<jsp:forward page="./Blue.jsp" />
+			<%}%>
+
+			<%if (request.getParameter("page").equals("pink")) {%>
+			<jsp:forward page="./Pink.jsp" />
+			<%}%>
+	" method="post">
+
+		<label for="firstname">First Name</label>
+		<br>
+		<input type="text" name="firstName" />
+		<br>
+		<label for="lastName">Last Name</label>
+		<br>
+		<input type="text" name="lastName" />
+		<br>
+		<select name="page">
 			<option value="red">Red Background</option>
 			<option value="blue">Blue Background</option>
 			<option value="pink">Pink Background</option>
-		</select> <br> <input type="submit" value="Send" /> <br>
+		</select>
+		<br>
+		<input type="submit" value="Send" />
+		<br>
 	</form>
 
 	<jsp:include page="./Footer.jsp"></jsp:include>
