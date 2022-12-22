@@ -7,10 +7,21 @@
 <title>Index</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath()%>/LoginServlet" method="POST">
-		<input type="text" name="username" placeholder="Username"><br>
-		<input type="password" name="password" placeholder="Password"><br>
-		<input type="submit" value="Submit" />
-	</form>
+	<div align="center">
+		<h1>Login form</h1>
+		<form action="<%=request.getContextPath()%>/LoginServlet" method="POST">
+			<table>
+				<tr>
+					<td><input type="text" name="username" placeholder="Username"></td>
+				</tr>
+				<tr>
+					<td><input type="password" name="password" placeholder="Password"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Submit" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
 </body>
 </html>
